@@ -15,5 +15,7 @@ document.getElementById("btn").addEventListener("click",function(){
 
         // insert The commnet
         commentPostArea.appendChild(com);
-        
+
+        // clear the commnet box:
+        commentField.value = "";
 });
