@@ -28,8 +28,17 @@
     <button id="btn-2">
         Click to see the magic-2
     </button>
+    
+
+    <br>
+    <br>
 
 
+    <!-- taking input from user: -->
+    <input type="text" name="" id="input-field" placeholder="name">
+    <button id="enter">
+        Enter
+    </button>
 
 
     <!-- script start -->
@@ -41,10 +50,33 @@
             textField.innerText="Hello World!!!..."
             textField.style.backgroundColor="pink";
             textField.style.textAlign="center";
+            textField.style.fontSize="1.5rem"
         }
 
-        // mostlyused process-2:
-        
+        // mostly used process-2:
+        document.getElementById("btn-2").addEventListener("click",function(){
+            let textField = document.getElementById("demo-field");
+            textField.innerText = "Hello Welcome to Our Website";
+            textField.style.backgroundColor="yellow";
+            textField.style.textAlign="center";
+            textField.style.fontSize="1.5rem"
+        });
+
+
+        // take user input and welcome him with his name:
+        document.getElementById("enter").addEventListener("click",function(){
+
+            let inputArea = document.getElementById("input-field");
+            let inputText = inputArea.value;
+
+            let displayArea = document.getElementById("demo-field");
+            displayArea.innerText = "Welcome To Our Website "+inputText+" Please Visit Us!!!";
+            displayArea.style.backgroundColor = "gold";
+            displayArea.style.fontSize = "1.5rem";
+            displayArea.style.textAlign= "center";
+            
+
+        });
 
     </script>
 
