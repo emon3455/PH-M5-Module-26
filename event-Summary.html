@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Events</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+    
+    <h1>Exploring the summary of event listner add...</h1>
+
+    <p id="demo-field">
+        Demo text...............
+    </p>
+
+    <button onclick="changeDemotext()">
+        Click to see the magic-1
+    </button>
+
+    <button id="btn-2">
+        Click to see the magic-2
+    </button>
+
+
+
+
+    <!-- script start -->
+    <script>
+
+        // mostly used process-1
+        function changeDemotext(){
+            let textField = document.getElementById("demo-field");
+            textField.innerText="Hello World!!!..."
+            textField.style.backgroundColor="pink";
+            textField.style.textAlign="center";
+        }
+
+        // mostlyused process-2:
+        
+
+    </script>
+
+</body>
+</html>
