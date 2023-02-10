@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Deleget</title>
+
+    <style>
+
+        
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Event Deleget (add and delet element)</h1>
+
+    <ul id="list-container">
+        <li class="list-item">Lorem ipsum dolor sit amet.</li>
+        <li class="list-item">Deleniti obcaecati doloremque nemo consectetur!</li>
+        <li class="list-item">Consequuntur magnam aspernatur error ab.</li>
+        <li class="list-item">Vel, deserunt. Commodi, eaque tempora?</li>
+        <li class="list-item">Vel atque facilis quisquam ad!</li>
+    </ul>
+    
+    <button id="addItems" >Add Item</button>
+
+
+
+    <!-- js -->
+    <script>
+
+        // To remove
+        // let listItems= document.getElementsByClassName("list-item");
+        // for (const lists of listItems) {
+        //     lists.addEventListener("click", function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     });
+        // }
+
+        // to remove:
+        document.getElementById("list-container").addEventListener("click",function(event){
+            event.target.parentNode.removeChild(event.target);
+        });
+
+        // To add:
+        document.getElementById("addItems").addEventListener("click",function(){
+
+            let listContainer = document.getElementById("list-container");
+
+            let li = document.createElement("li");
+            li.innerText= "New List item added";
+            li.classList.add("list-item");
+            listContainer.appendChild(li);
+        });
+
+    </script>
+
+</body>
+</html>
