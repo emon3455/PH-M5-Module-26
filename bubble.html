@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Event Bubble</title>
+</head>
+<body id="body">
+
+    <h1 id="header">Exploring event Bubble</h1>
+
+    <section id="section">
+
+        <ul id="ul-list">
+
+            <li id="item-1">Lorem ipsum dolor sit amet.</li>
+            <li id="item-2">Debitis unde ad id. Minus?</li>
+            <li id="item-3">Esse amet delectus possimus mollitia.</li>
+            <li id="item-4">Nulla aspernatur delectus neque mollitia?</li>
+            <li id="item-5">Dolore corporis nemo fuga assumenda!</li>
+
+        </ul>
+
+    </section>
+    
+
+    <!-- js script -->
+    <script>
+
+
+        document.getElementById("item-2").addEventListener("click", function(event){
+            console.log("item-2 clicked1");
+            event.stopImmediatePropagation();
+        });
+        document.getElementById("item-2").addEventListener("click", function(){
+            console.log("item-2 clicked2");
+        });
+        document.getElementById("item-2").addEventListener("click", function(){
+            console.log("item-2 clicked3");
+        });
+
+
+        document.getElementById("ul-list").addEventListener("click", function(){
+            console.log("ul clicked");
+        });
+        
+        document.getElementById("section").addEventListener("click", function(){
+            console.log("Section clicked");
+        });
+
+        document.getElementById("body").addEventListener("click", function(){
+            console.log("Body clicked");
+        });
+
+
+    </script>
+
+
+</body>
+</html>
